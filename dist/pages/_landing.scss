@@ -39,7 +39,7 @@
                 display: inline-block;
                 padding: 1.2rem 2rem;
                 border-radius: 1rem;
-                background: $clr-dark;
+                background:  #000000;
                 color: #ffffff;
                 font-size: 1.5rem;
                 font-weight: 600;
@@ -72,7 +72,7 @@
             width:70%;
             justify-self:center;
         }
-        @include mediaQuery($break-lg){
+@include mediaQuery($break-lg){
         &{
             padding-top: 5rem;
             padding-bottom: .3rem;
@@ -108,7 +108,7 @@
                 line-height: 1rem;
                 margin-bottom: 2rem;
                 text-align: justify;
-                margin-bottom: 3rem;
+                margin-top: 3rem;
             }
          
         
@@ -128,4 +128,9 @@
     }
 }
    }
+   img {
+    margin-top: 2rem;
+    width:60%;
+
+}
  }

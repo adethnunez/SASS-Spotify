@@ -195,7 +195,7 @@ body {
   display: inline-block;
   padding: 1.2rem 2rem;
   border-radius: 1rem;
-  background: hsl(0, 0%, 20%);
+  background: #000000;
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 600;
@@ -260,7 +260,7 @@ body {
     line-height: 1rem;
     margin-bottom: 2rem;
     text-align: justify;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
   .banner__btn {
     display: flex;
@@ -274,4 +274,8 @@ body {
   .banner__btn #view {
     margin-bottom: 0;
   }
+}
+.banner img {
+  margin-top: 2rem;
+  width: 60%;
 }/*# sourceMappingURL=main.css.map */
