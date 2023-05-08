@@ -1,0 +1,131 @@
+.banner {
+    background: #b02897;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+
+&__wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2rem;
+        
+    }
+
+&__text {
+    h1 {
+        text-align: justify;
+        color: $clr-light;
+        font-weight: 800;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    h4 {
+        text-align: justify;
+        font-size: 2.3rem;
+        font-weight: 500;
+        color: $clr-light;
+        margin-bottom: 3.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+        color: $clr-light;
+        line-height: 1rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+    }
+}
+
+    &__btn {
+                #get{
+                display: inline-block;
+                padding: 1.2rem 2rem;
+                border-radius: 1rem;
+                background: $clr-dark;
+                color: #ffffff;
+                font-size: 1.5rem;
+                font-weight: 600;
+                padding: 1.2rem 2rem;
+                margin-bottom: 1rem;
+                border-radius: 5rem;
+                width: 100%;
+                text-align: center;
+                }
+            
+            #view{
+                display: inline-block;
+                padding: 1.2rem;
+                border-radius: 1rem;
+                background: $clr-transparent;
+                border: 2px solid $clr-light;
+                color: $clr-light;
+                font-size: 1.5rem;
+                font-weight: 600;
+                padding: .8rem 3.5rem;
+                border-radius: 5rem;
+                margin-bottom: 2rem;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 4rem;
+                
+            }
+        }
+        img {
+            width:70%;
+            justify-self:center;
+        }
+        @include mediaQuery($break-lg){
+        &{
+            padding-top: 5rem;
+            padding-bottom: .3rem;
+        }
+        &__wrapper {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 2rem; 
+            img {
+                width:70%;
+                justify-self:center;
+            }
+        }
+        &__text {
+            h1 {
+                margin-top: 4rem;
+                text-align: justify;
+                color: $clr-light;
+                font-weight: 800;
+                font-size: 5rem;
+                margin-bottom: 3rem;
+            }
+            h4 {
+                text-align: justify;
+                font-size: 2.3rem;
+                font-weight: 500;
+                color: $clr-light;
+                margin-bottom: 3rem;
+            }
+            p {
+                font-size: 1.2rem;
+                color: $clr-light;
+                line-height: 1rem;
+                margin-bottom: 2rem;
+                text-align: justify;
+                margin-bottom: 3rem;
+            }
+         
+        
+}
+&__btn {
+    display: flex;
+    max-width: 35rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    #get{
+        margin-bottom: 0;
+        }
+    
+    #view{
+        margin-bottom: 0;
+        
+    }
+}
+   }
+ }
