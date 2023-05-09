@@ -205,6 +205,9 @@ body {
   width: 100%;
   text-align: center;
 }
+.banner__btn:hover #get {
+  transform: scale(1.04);
+}
 .banner__btn #view {
   display: inline-block;
   padding: 1.2rem;
@@ -220,6 +223,9 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 4rem;
+}
+.banner__btn:hover #view {
+  transform: scale(1.04);
 }
 .banner img {
   width: 70%;
@@ -274,8 +280,183 @@ body {
   .banner__btn #view {
     margin-bottom: 0;
   }
+  .banner img {
+    margin-top: 2rem;
+    width: 60%;
+  }
 }
-.banner img {
+
+.banner__premium h2 {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+.banner__premium .item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.banner__premium .item img {
+  width: 10em;
+  height: 12rem;
+  margin-bottom: 2rem;
+}
+.banner__premium .text {
+  display: inline-block;
+  width: 100%;
+  margin: 1rem 0;
+  line-height: 2;
+}
+.banner__premium .text h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 1080px) {
+  .banner__premium .container {
+    padding: 3rem, 0, 3rem 0;
+  }
+  .banner__premium .container h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 1.3rem, 0, 1.5rem 0;
+  }
+  .banner__premium .banner__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-gap: 0rem;
+    margin-top: 5rem;
+  }
+  .banner__premium .item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner__premium .item img {
+    width: 12rem;
+    height: 12rem;
+  }
+  .banner__premium .item .text {
+    display: inline;
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 2rem;
+  }
+  .banner__premium .item .text h4 {
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+  }
+  .banner__premium .item .text p {
+    font-size: 1.8rem;
+  }
+}
+
+.card {
+  background: rgb(234, 232, 232);
+}
+.card .container {
+  margin: 1rem;
+}
+.card .title h2 {
+  font-size: 3rem;
+  text-align: center;
   margin-top: 2rem;
-  width: 60%;
+}
+.card .title p {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+.card .list {
+  display: flex;
+  justify-content: center;
+}
+.card .list ul {
+  display: flex;
+}
+.card .list li {
+  padding: 2.2rem 0rem 2rem 1rem;
+}
+.card .list img {
+  width: 2rem;
+}
+.card .list p {
+  margin-top: 2rem;
+  text-decoration: underline;
+}
+.card .box {
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: gray;
+}
+.card .box .term a {
+  border: 2px solid #0D72EA;
+  color: #0D72EA;
+  font-weight: 600;
+}
+.card .box .term #wallet {
+  background: #0D72EA;
+  color: white;
+}
+.card .box .term h3 {
+  font-size: 2.5rem;
+  padding-top: 1rem;
+}
+.card .box .term span {
+  width: 95%;
+  height: 0.3rem;
+  background-color: gray;
+  display: block;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.card .box .check li {
+  display: flex;
+}
+.card .box .check i {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.card .box .check p {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+.card .box .check h5 {
+  text-decoration: underline;
+  color: rgb(121, 121, 121);
+}
+.card .box .check a {
+  font-size: 1.2rem;
+}
+.card .box .btn-button .dark {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  border-radius: 1rem;
+  background: #000000;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.2rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 5rem;
+  width: 100%;
+  text-align: center;
+}
+.card .box .btn-button:hover .dark {
+  transform: scale(1.04);
+}
+@media screen and (min-width: 1080px) {
+  .card {
+    padding-top: 5rem;
+    padding-bottom: 0.3rem;
+  }
+  .card .title {
+    text-align: center;
+    width: 100%;
+    display: inline;
+  }
 }/*# sourceMappingURL=main.css.map */
