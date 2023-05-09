@@ -354,85 +354,90 @@ body {
   }
 }
 
-.card {
-  background: rgb(234, 232, 232);
+.box {
+  padding: 5rem o;
+  background: #efefef;
 }
-.card .container {
-  margin: 1rem;
+.box .container {
+  padding-bottom: 5rem;
 }
-.card .title h2 {
+.box__title {
+  text-align: center;
+  margin: 0rem 2rem 3rem 2rem;
+}
+.box__title h2 {
   font-size: 3rem;
-  text-align: center;
-  margin-top: 2rem;
 }
-.card .title p {
-  font-size: 2rem;
-  text-align: center;
-  padding: 1rem;
+.box__title p {
+  margin: 1rem 0;
 }
-.card .list {
+.box__title ul {
   display: flex;
   justify-content: center;
 }
-.card .list ul {
-  display: flex;
+.box__title ul li a img {
+  width: 100%;
+  height: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: center center;
+     object-fit: center center;
+  display: block;
 }
-.card .list li {
-  padding: 2.2rem 0rem 2rem 1rem;
-}
-.card .list img {
-  width: 2rem;
-}
-.card .list p {
-  margin-top: 2rem;
+.box__title ul li:last-child a {
   text-decoration: underline;
 }
-.card .box {
-  background: hsl(0, 0%, 100%);
-  border-radius: 10px;
-  box-shadow: gray;
+.box__title ul li:last-child:hover a {
+  text-decoration: none;
 }
-.card .box .term a {
-  border: 2px solid #0D72EA;
-  color: #0D72EA;
-  font-weight: 600;
-}
-.card .box .term #wallet {
-  background: #0D72EA;
-  color: white;
-}
-.card .box .term h3 {
-  font-size: 2.5rem;
-  padding-top: 1rem;
-}
-.card .box .term span {
-  width: 95%;
-  height: 0.3rem;
-  background-color: gray;
-  display: block;
-  margin-left: 1rem;
+.box__item {
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: rgb(255, 255, 255) 0px 8px 0px 0px, rgba(0, 0, 0, 0.3) 0px 0px 8px;
   margin-top: 2rem;
+}
+.box__item__top {
+  border-bottom: 1px solid black;
+  padding: 2rem 0;
+  min-height: 20rem;
+}
+.box__item__top h4 {
+  border-radius: 0.5rem;
+}
+.box__item__top h4.light {
+  border: 1px solid #0D72EA;
+  color: #0D72EA;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.box__item__top h4.blue {
+  background: #0D72EA;
+  border: 1px solid transparent;
+  color: hsl(0, 0%, 100%);
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+.box__item__top h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.box__item__mid {
+  padding-top: 2rem;
+  min-height: 20rem;
+}
+.box__item__mid ul li i {
+  margin-right: 2rem;
+}
+.box__item__mid ul li:not(:first-child) {
+  margin-top: 1rem;
+}
+.box__item .bot {
   margin-bottom: 3rem;
 }
-.card .box .check li {
-  display: flex;
-}
-.card .box .check i {
-  font-size: 2rem;
-  margin: 1rem;
-}
-.card .box .check p {
-  font-size: 1.8rem;
-  margin-top: 0.5rem;
-}
-.card .box .check h5 {
-  text-decoration: underline;
-  color: rgb(121, 121, 121);
-}
-.card .box .check a {
-  font-size: 1.2rem;
-}
-.card .box .btn-button .dark {
+.box__item .bot a {
   display: inline-block;
   padding: 1.2rem 2rem;
   border-radius: 1rem;
@@ -446,17 +451,40 @@ body {
   width: 100%;
   text-align: center;
 }
-.card .box .btn-button:hover .dark {
-  transform: scale(1.04);
+.box__item p {
+  font-size: 1.5rem;
+}
+.box__item p a {
+  text-decoration: underline;
+  color: #000000;
+}
+.box__item p a:hover {
+  text-decoration: none;
 }
 @media screen and (min-width: 1080px) {
-  .card {
-    padding-top: 5rem;
-    padding-bottom: 0.3rem;
+  .box__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
   }
-  .card .title {
-    text-align: center;
-    width: 100%;
-    display: inline;
-  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 5rem;
+}
+.btn:hover {
+  transform: scale(1.04);
+}
+.btn.bg--transparent {
+  background: black;
+  color: hsl(0, 0%, 100%);
+}
+.btn.bg--dark {
+  background: transparent;
+  padding: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
 }/*# sourceMappingURL=main.css.map */
