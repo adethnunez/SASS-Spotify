@@ -29,11 +29,64 @@ body {
   padding: 1.5rem;
 }
 
+.footer {
+  background: black;
+}
+.footer .wrapper {
+  margin: 5rem 0;
+}
+.footer .wrapper h5 {
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1rem;
+}
+.footer .wrapper h5 i {
+  font-size: 1rem;
+}
+.footer .wrapper h5:hover {
+  cursor: pointer;
+}
+.footer .wrapper h5:hover span {
+  color: green;
+}
+.footer .wrapper .footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .wrapper .footer__content ul {
+  max-width: 24rem;
+  display: flex;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 1rem;
+}
+.footer .wrapper .footer__content ul li a {
+  color: gray;
+}
+.footer .wrapper .footer__content ul li:hover {
+  cursor: pointer;
+}
+.footer .wrapper .footer__content ul li:hover a {
+  color: green;
+}
+.footer .wrapper .footer__content p {
+  color: gray;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
 .header {
   background: hsl(0, 0%, 20%);
   position: relative;
   position: fixed;
   width: 100%;
+}
+.header.blue {
+  background: blue;
 }
 .header .blur {
   height: 100vh;
@@ -160,6 +213,104 @@ body {
   }
 }
 
+.links {
+  padding: 5rem 0;
+  background: black;
+}
+.links img {
+  width: 10rem;
+}
+.links__drop {
+  margin: 5rem 0;
+}
+.links__drop__item:not(:first-child), .links__drop__item:not(:last-child) {
+  margin: 3rem 0;
+}
+.links__drop__item h4 {
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.links__drop__item h4 i {
+  transition: 0.5s ease;
+}
+.links__drop__item h4 i.open {
+  transform: rotate(180deg);
+  transition: 0.5s ease;
+}
+.links__drop__item ul {
+  margin: 0 5rem;
+  max-height: 0rem;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.links__drop__item ul.open {
+  max-height: 25rem;
+  transition: 0.5s ease;
+}
+.links__drop__item ul li {
+  padding: 1rem 0;
+}
+.links__drop__item ul li a {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+}
+.links__drop__item ul li:hover {
+  cursor: pointer;
+}
+.links__drop__item ul li:hover a {
+  color: green;
+}
+.links__social ul {
+  display: flex;
+  gap: 2rem;
+}
+.links__social ul li a {
+  color: white;
+  display: inline-block;
+  background: gray;
+  padding: 1rem;
+  border-radius: 5rem;
+  width: 4.5rem;
+  text-align: center;
+}
+.links__social ul li:hover {
+  cursor: pointer;
+}
+.links__social ul li:hover a {
+  color: green;
+}
+@media screen and (min-width: 1080px) {
+  .links__wrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1.5fr;
+    grid-gap: 5rem;
+  }
+  .links__drop {
+    margin: 0;
+    display: flex;
+    align-items: start;
+    gap: 10rem;
+  }
+  .links__drop__item:not(:first-child), .links__drop__item:not(:last-child) {
+    margin: 0;
+  }
+  .links__drop__item h4 {
+    pointer-events: none;
+  }
+  .links__drop__item h4 i {
+    display: none;
+  }
+  .links__drop__item ul {
+    max-height: 25rem;
+    margin: 1rem 0;
+  }
+  .links__social ul {
+    justify-content: flex-end;
+  }
+}
+
 .banner {
   background: #b02897;
   padding-top: 10rem;
@@ -231,15 +382,16 @@ body {
   width: 70%;
   justify-self: center;
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .banner {
     padding-top: 5rem;
     padding-bottom: 0.3rem;
   }
   .banner__wrapper {
-    display: grid;
+    display: block;
     grid-template-columns: auto auto;
     grid-gap: 2rem;
+    text-align: center;
   }
   .banner__wrapper img {
     width: 70%;
@@ -250,7 +402,7 @@ body {
     text-align: justify;
     color: hsl(0, 0%, 100%);
     font-weight: 800;
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 3rem;
   }
   .banner__text h4 {
@@ -282,7 +434,64 @@ body {
   }
   .banner img {
     margin-top: 2rem;
-    width: 60%;
+    max-width: 30rem;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .banner {
+    padding: 5rem;
+  }
+  .banner__wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2rem;
+    align-items: center;
+  }
+  .banner__wrapper img {
+    width: 70%;
+    justify-self: center;
+  }
+  .banner__text {
+    width: 70rem;
+  }
+  .banner__text h1 {
+    margin-top: 4rem;
+    text-align: justify;
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  .banner__text h4 {
+    text-align: justify;
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 3rem;
+  }
+  .banner__text p {
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 100%);
+    line-height: 1rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    margin-top: 3rem;
+  }
+  .banner__btn {
+    display: flex;
+    max-width: 35rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .banner__btn #get {
+    margin-bottom: 0;
+  }
+  .banner__btn #view {
+    margin-bottom: 0;
+  }
+  .banner img {
+    margin-top: 4rem;
+    max-width: 40rem;
   }
 }
 
@@ -299,7 +508,7 @@ body {
   margin-bottom: 1rem;
 }
 .banner__premium .item img {
-  width: 10em;
+  width: 10rem;
   height: 12rem;
   margin-bottom: 2rem;
 }
@@ -312,6 +521,32 @@ body {
 .banner__premium .text h4 {
   font-size: 2rem;
   font-weight: 600;
+}
+.banner__premium .text .item {
+  flex-direction: column;
+  align-items: center;
+}
+.banner__premium .text .item img {
+  width: 12rem;
+  height: 12rem;
+}
+.banner__premium .text .item .text {
+  display: inline;
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .banner__premium .banner__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2rem, 1fr);
+    grid-gap: 0;
+    align-items: center;
+  }
+  .banner__premium .items:not(:first-child) {
+    margin-top: 0rem;
+  }
 }
 @media screen and (min-width: 1080px) {
   .banner__premium .container {
@@ -460,6 +695,12 @@ body {
 }
 .box__item p a:hover {
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .box__wrapper {
+    padding-right: 15rem;
+    padding-left: 15rem;
+  }
 }
 @media screen and (min-width: 1080px) {
   .box__wrapper {
