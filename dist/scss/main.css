@@ -696,6 +696,9 @@ body {
 .box__item p a:hover {
   text-decoration: none;
 }
+.box__item:first-child a {
+  text-decoration: underline;
+}
 @media screen and (min-width: 768px) {
   .box__wrapper {
     padding-right: 15rem;

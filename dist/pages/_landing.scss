@@ -432,6 +432,11 @@
                     }
                 }
             }
+            &:first-child{
+                a{
+                    text-decoration: underline;
+                }
+            }
         }
         @include mediaQuery(768px){
             &__wrapper {
